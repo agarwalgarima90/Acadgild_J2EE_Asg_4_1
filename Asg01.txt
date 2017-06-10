@@ -1,0 +1,21 @@
+1. Steps to import db.sql in MySQL using XAMPP
+	i. Install XAMPP on machine.
+	ii. Start Apache and MySql from XAMPP Panel.
+	iii. Login to phpmyadmin.
+	iv. Using XAMPP shell, go to C:\xampp\mysql\bin
+	v. Type command : mysql -u {DB_USER} -p {DB_NAME} < path/to/file/ab.sql
+		-- Enter the password when prompted.
+		-- DB_NAME will be an existing DB on phpmyadmin.
+
+2. Operations
+	a. create database Bank;
+	b. use Bank;
+	c. create table Customer ( C_ID varchar(10),
+								CNAME varchar(20) NOT NULL,
+								MNO int,
+								ADDRESS varchar(30),
+								CITY varchar(10),
+								PRIMARY KEY (C_ID)
+							);
+	d(i) alter table Customer ADD DOB date;
+	d(ii) alter table Customer modify column ADDRESS varchar(20);
